@@ -323,7 +323,7 @@ address {
 }
 
 .address-link:hover {
-    color: var(--color-primary-dark);
+    color: var(--color-brand-normal);
 }
 
 .address-icon {
