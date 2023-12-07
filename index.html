@@ -32,7 +32,7 @@
                     </li>
                 </ul>
             </nav>
-            <button class="button" type="button">Замовити дзвінок</button>
+            <button class="modal-btn-open button" type="button">Замовити дзвінок</button>
         </div>
     </div>
 </header>
@@ -75,7 +75,7 @@
     <section class="section" id="chefs-section">
         <div class="container">
             <h2 class="chefs-title section-title centered">
-                Наші найкращі <span class="accent">шеф -кухарі</span>
+                Наші найкращі <br><span class="accent">шеф -кухарі</span>
             </h2>
             <ul class="chefs-list">
                 <li class="chefs-item">
@@ -241,6 +241,16 @@
         </div>
     </div>
 </footer>
+
+<!--Modal window-->
+<div class="backdrop is-hidden">
+    <div class="modal">
+        <button class="modal-btn-close" type="button">X</button>
+        <h2 class="modal-title"></h2>
+    </div>
+</div>
+
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
