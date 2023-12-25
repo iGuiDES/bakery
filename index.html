@@ -264,26 +264,32 @@
 </footer>
 
 <!--Modal window-->
-<div class="backdrop is-hidden">
+<div class="backdrop">
   <div class="modal">
     <button class="modal-btn-close" type="button">X</button>
     <h2 class="modal-title">Замовити дзвінок</h2>
     <p class="modal-text">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-    <form name="modal-form" autocomplete="off" novalidate>
+    <form name="modal-form" autocomplete="off">
       <div class="form-fields">
-        <input class="form-input" type="text" name="user-name" id="user-name">
-        <label class="form-label" for="user-name">Імʼя</label>
+        <label class="form-label" for="user-name"></label>
+        <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Імʼя" required>
       </div>
 
       <div class="form-fields">
-        <input class="form-input" type="tel" name="user-phone" id="user-phone">
-        <label class="form-label" for="user-phone">Телефон</label>
+        <label class="form-label" for="user-phone"></label>
+        <input class="form-input" type="tel" name="user-phone" id="user-phone" placeholder="Телефон" required>
       </div>
 
       <div class="form-fields">
-        <input class="form-input" type="email" name="user-email" id="user-email">
-        <label class="form-label" for="user-email">Електронна пошта</label>
+        <label class="form-label" for="user-email"></label>
+        <input class="form-input" type="email" name="user-email" id="user-email" placeholder="Електронна пошта"
+               required>
       </div>
+
+      <!--      <div class="form-checkbox">-->
+      <!--        <input class="checkbox-input visually-hidden" type="checkbox" id="terms-conditions" name="terms-conditions">-->
+      <!--        <label class="checkbox-label" for="terms-conditions">Я погоджуюсь з політикою конфіденційності</label>-->
+      <!--      </div>-->
 
       <button class="form-button button" type="submit">Замовити дзвінок</button>
       <p class="form-terms">
