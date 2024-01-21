@@ -1,160 +1,18 @@
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-weight: 300;
-  src: url("../../fonts/poppins-v20-latin-300.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-weight: 400;
-  src: url("../../fonts/poppins-v20-latin-regular.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-weight: 600;
-  src: url("../../fonts/poppins-v20-latin-600.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Poppins";
-  font-weight: 900;
-  src: url("../../fonts/poppins-v20-latin-900.woff2") format("woff2");
-}
-:root {
-  --color-brand-normal: #819B57;
-  --color-brand-light: #CFCFBC;
-  --color-primary-dark: #31261A;
-  --color-primary-light: #FAF4EA;
-  --color-brand-dark: #465929;
-  --color-secondary-dark: #A18268;
-}
+@import "utils/fonts";
+@import "utils/variables";
+@import "base";
+@import "utils/utils";
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+@import "components/buttons";
+@import "components/links";
+@import "components/header";
+@import "components/hero-section";
 
-h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0;
-}
-
-body {
-  color: var(--color-primary-dark);
-  background-color: var(--color-primary-light);
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0;
-}
-
-a {
-  display: inline-block;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-address {
-  font-style: normal;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.button {
-  padding: 16px 32px;
-  color: var(--color-primary-light);
-  border-radius: 8px;
-  border: 2px solid var(--color-brand-normal);
-  background-color: var(--color-brand-normal);
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.button:hover {
-  color: var(--color-brand-dark);
-  background-color: var(--color-primary-light);
-}
-
-.button[disabled] {
-  color: gray;
-  background-color: lightgray;
-  border-color: currentColor;
-  cursor: not-allowed;
-}
-
-.link {
-  color: var(--color-primary-light);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.link:hover {
-  color: var(--color-brand-normal);
-}
-
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 32px;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  gap: 40px;
-}
-
-.header-menu {
-  display: flex;
-  align-items: center;
-  gap: 64px;
-  flex-grow: 1;
-  justify-content: center;
-}
-
-.hero-section {
-  margin: 0 auto;
-  padding: 272px 0;
-  background-image: linear-gradient(103deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url("../images/hero-section-bgc.jpg");
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-}
-
-.hero-title {
-  color: var(--color-primary-light);
-  text-align: center;
-  font-size: 128px;
-  font-weight: 900;
-  margin-bottom: 0;
-}
-
-.hero-title .accent {
-  color: var(--color-brand-normal);
-}
+//@import "utils/mixins";
+//
+//.circle {
+//  @include circle(40px, 40px, #fff);
+//}
 
 .section {
   padding: 48px 0;
@@ -254,7 +112,7 @@ address {
 .chefs-title::after {
   position: absolute;
   bottom: 24px;
-  content: "";
+  content: '';
   max-width: 352px;
   width: 100%;
   border: 2px solid var(--color-brand-light);
@@ -323,8 +181,8 @@ address {
   height: 444px;
   border-radius: 16px;
   padding: 24px;
-  background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
-  transition: transform 0.3s;
+  background-image: linear-gradient(180deg, rgba(49, 38, 26, 0.00) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+  transition: transform .3s;
 }
 
 .format-card:hover {
@@ -415,7 +273,7 @@ address {
 
 .footer::before,
 .footer::after {
-  content: "";
+  content: '';
   position: absolute;
   background-repeat: no-repeat;
   bottom: 0;
@@ -488,9 +346,9 @@ address {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
   padding: 20px;
-  transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity .3s, visibility .3s;
 }
 
 .backdrop.is-hidden {
@@ -524,6 +382,7 @@ address {
 .form-fields {
   position: relative;
   margin-bottom: 32px;
+
 }
 
 .form-label {
@@ -533,7 +392,7 @@ address {
   font-size: 16px;
   line-height: 1.18;
   color: var(--color-secondary-dark);
-  transition: transform 0.3s;
+  transition: transform .3s;
 }
 
 .form-input {
@@ -598,9 +457,7 @@ address {
   width: 16px;
   height: 16px;
   margin-top: 5px;
-  content: "";
+  content: '';
   border: 1px solid var(--color-primary-dark);
   border-radius: 2px;
 }
-
-/*# sourceMappingURL=styles.css.map */
