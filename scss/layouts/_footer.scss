@@ -1,50 +1,86 @@
 .footer {
-  padding: 32px 0;
-  position: relative;
-  background-image: url("../../images/footer-bgc.png");
-  background-color: var(--color-primary-dark);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+    padding: 32px 0;
+    position: relative;
+    background-image: url("../../images/footer-bgc.png");
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-.footer::before,
-.footer::after {
-  content: '';
-  position: absolute;
-  background-repeat: no-repeat;
-  bottom: 0;
-}
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background-repeat: no-repeat;
+        bottom: 0;
+    }
 
-.footer::before {
-  width: 180px;
-  height: 120px;
-  background-image: url("../../images/decor-bread-small.png");
-  left: 0;
-}
+    &::before {
+        width: 180px;
+        height: 120px;
+        background-image: url("../../images/decor-bread-small.png");
+        left: 0;
+    }
 
-.footer::after {
-  width: 380px;
-  height: 190px;
-  right: 0;
-  background-image: url("../../images/decor-bread-large.png");
-}
+    &::after {
+        width: 380px;
+        height: 190px;
+        right: 0;
+        background-image: url("../../images/decor-bread-large.png");
+    }
 
-.footer-container {
-  display: flex;
-  gap: 20px;
-}
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-.footer-nav,
-.footer-address {
-  display: flex;
-  flex-basis: 50%;
-  gap: 20px;
-}
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+        }
+    }
 
-.footer-logo,
-.footer-menu,
-.address-lists,
-.address-info {
-  flex-grow: 1;
+    &__nav,
+    &__address {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+
+        @media screen and (min-width: $bp-tablet) {
+            flex-direction: row;
+            flex-basis: 50%;
+            text-align: left;
+        }
+    }
+
+    &__logo,
+    &__menu,
+    &__address-lists,
+    &__address-info {
+        flex-grow: 1;
+    }
+
+    &__address-link {
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--color-primary-light);
+        text-decoration: none;
+    }
+
+    &__address-link:hover {
+        color: var(--color-brand-normal);
+    }
+
+    &__address-icon {
+        fill: var(--color-primary-light);
+    }
+
+    &__address-icon:hover {
+        fill: var(--color-brand-normal);
+    }
+
+    &__address-copyright {
+        font-size: 14px;
+        color: var(--color-secondary-dark);
+    }
 }
